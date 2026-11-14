@@ -65,6 +65,8 @@ const ORG = {
   "sameAs": ["https://www.instagram.com/juntosanteelcushing", "https://www.facebook.com/share/17VocVd75p/", "https://x.com/juntoscushing"]
 };
 
+const VERSION = Date.now().toString(36); // fuerza a los navegadores a descargar CSS/JS nuevos tras cada publicación
+
 const MENU = [
   ['index.html', 'Inicio'],
   ['proceso.html', 'Proceso'],
@@ -100,7 +102,7 @@ ${meta.jsonld ? "<script type=\"application/ld+json\">" + JSON.stringify(meta.js
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=${VERSION}">
 </head>
 <body>
 <a class="salto" href="#contenido">Saltar al contenido</a>
@@ -168,7 +170,7 @@ ${body}
   </div>
 </footer>
 
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main.js?v=${VERSION}"></script>
 </body>
 </html>
 `;
