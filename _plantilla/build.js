@@ -61,7 +61,7 @@ const ORG = {
   "telephone": "+34648524836",
   "address": { "@type": "PostalAddress", "streetAddress": "Calle Mur, 128, planta 2, puerta 2", "postalCode": "08760", "addressLocality": "Martorell", "addressRegion": "Barcelona", "addressCountry": "ES" },
   "areaServed": [{ "@type": "Country", "name": "España" }, { "@type": "Place", "name": "Latinoamérica" }],
-  "knowsAbout": ["Síndrome de Cushing", "Enfermedad de Cushing", "Hipercortisolismo", "Cushing hipofisario", "Cushing suprarrenal", "Cushing ectópico", "Cushing iatrogénico", "Enfermedades raras", "Apoyo a pacientes"],
+  "knowsAbout": ["Síndrome de Cushing", "Enfermedad de Cushing", "Hipercortisolismo", "Cushing hipofisario", "Cushing suprarrenal", "Cushing ectópico", "Cushing exógeno", "Cushing iatrogénico", "Enfermedades raras", "Apoyo a pacientes"],
   "sameAs": ["https://www.instagram.com/juntosanteelcushing", "https://www.facebook.com/share/17VocVd75p/", "https://x.com/juntoscushing"]
 };
 
