@@ -1,0 +1,128 @@
+{"titulo":"Apoyo y comunidad | Juntos ante el Cushing","descripcion":"Comunidad de WhatsApp, talleres de acompañamiento y hoja de inscripción de la asociación Juntos ante el Cushing.","activo":"apoyo.html"}
+<section class="cabecera-pagina">
+  <div class="contenedor">
+    <span class="etiqueta">Acompañamos el Cushing</span>
+    <h1>Apoyo y comunidad</h1>
+    <p class="entradilla">Un diagnóstico raro puede hacerte sentir muy solo. Aquí encontrarás personas que lo entienden sin necesidad de explicarlo y espacios para cuidarte por dentro y por fuera.</p>
+  </div>
+</section>
+
+<!-- ===== WhatsApp ===== -->
+<section class="seccion" id="whatsapp">
+  <div class="contenedor">
+    <div class="whatsapp aparece">
+      <div>
+        <span class="etiqueta">Comunidad de WhatsApp</span>
+        <h2>Grupos de acompañamiento</h2>
+        <p>Nuestros grupos de WhatsApp son un espacio seguro para resolver dudas, compartir cómo te encuentras, celebrar los avances y pedir ánimo en los días difíciles. Están formados por pacientes y familiares, y los coordinan personas de la junta directiva.</p>
+        <p>Para entrar, rellena la hoja de inscripción y marca que quieres formar parte del grupo. Aina o Leticia te añadirán personalmente y te darán la bienvenida.</p>
+        <div class="botones" style="margin-top:24px">
+          <a class="boton boton-carne" href="#unete">{{ico:whatsapp}} Quiero entrar en el grupo</a>
+        </div>
+      </div>
+      <div class="burbujas" aria-hidden="true">
+        <div class="burbuja">Dudas antes de una prueba o una consulta</div>
+        <div class="burbuja">Experiencias de quien ya ha pasado por ahí 💜</div>
+        <div class="burbuja">Ánimo en los días más difíciles</div>
+        <div class="burbuja">Celebrar juntos cada pequeño avance 🙌</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Talleres ===== -->
+<section class="seccion seccion-lila" id="talleres">
+  <div class="contenedor">
+    <div class="cabeza-seccion aparece">
+      <span class="etiqueta">Talleres de acompañamiento</span>
+      <h2>Cuidarte con profesionales</h2>
+      <span class="estado">Próximamente</span>
+      <p class="entradilla">Estamos preparando talleres con profesionales para acompañar los distintos aspectos de la enfermedad. Avisaremos de las fechas en los grupos y en nuestras redes.</p>
+    </div>
+    <div class="rejilla rejilla-3 aparece">
+      <article class="tarjeta"><div class="icono icono-carne">{{ico:hoja}}</div><h3>Nutrición</h3><p>Pautas para cuidar el peso, el azúcar, la tensión y la salud de los huesos, adaptadas a cada fase del tratamiento.</p></article>
+      <article class="tarjeta"><div class="icono">{{ico:cerebro}}</div><h3>Psicología</h3><p>Espacios para gestionar la ansiedad, la incertidumbre y los cambios en la imagen corporal, también para familiares y cuidadores.</p></article>
+      <article class="tarjeta"><div class="icono icono-carne">{{ico:paleta}}</div><h3>Arteterapia</h3><p>Expresar a través del arte lo que a veces cuesta poner en palabras. No hace falta saber dibujar.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Donaciones ===== -->
+<section class="seccion" id="donaciones">
+  <div class="contenedor">
+    <div class="llamada aparece">
+      <div>
+        <span class="estado">Próximamente</span>
+        <h2>Colabora con una donación</h2>
+        <p>Cada aportación nos ayuda a organizar talleres y jornadas, y a dar visibilidad al síndrome de Cushing. Muy pronto publicaremos aquí el número de cuenta de la asociación.</p>
+      </div>
+      <span class="boton boton-primario" aria-disabled="true" style="cursor:default;opacity:.65">{{ico:corazon}} Donar (muy pronto)</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Únete ===== -->
+<section class="seccion" id="unete">
+  <div class="contenedor formulario-caja">
+    <div class="aparece">
+      <span class="etiqueta">Hoja de inscripción</span>
+      <h2>Únete a nosotros</h2>
+      <p class="entradilla">Formar parte de la asociación te permite estar al día de actividades, jornadas y talleres, y conocer a otras personas que viven el Cushing de cerca.</p>
+      <ul class="lista-check">
+        <li>Información sobre actividades y novedades.</li>
+        <li>Acceso a los grupos de acompañamiento.</li>
+        <li>Un espacio para que tu voz cuente.</li>
+      </ul>
+      <p style="color:var(--texto-suave);font-size:.95rem">¿Prefieres hablar antes con alguien? Escríbenos a <a href="mailto:{{red:email}}">{{red:email}}</a>.</p>
+    </div>
+
+    <div class="aparece">
+      <!-- Envío por FormSubmit. Tras la activación, sustituir el correo de la URL por el alias que envía FormSubmit -->
+      <form class="formulario" id="form-inscripcion" action="https://formsubmit.co/lettybalaguer1983@gmail.com" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="Nueva inscripción desde la web de Juntos ante el Cushing">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://juntosanteelcushing.org/apoyo.html?enviado=1#unete">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+        <div class="campo">
+          <label for="nombre">Nombre y apellidos <span class="obligatorio">*</span></label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+        </div>
+        <div class="campo-doble">
+          <div class="campo">
+            <label for="provincia">Provincia o país <span class="obligatorio">*</span></label>
+            <input type="text" id="provincia" name="provincia" required>
+          </div>
+          <div class="campo">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" autocomplete="tel" inputmode="tel">
+          </div>
+        </div>
+        <div class="campo">
+          <label for="email">Correo electrónico <span class="obligatorio">*</span></label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+        <fieldset class="campo">
+          <legend>¿Quieres formar parte del grupo de WhatsApp? <span class="obligatorio">*</span></legend>
+          <div class="opciones">
+            <label class="opcion"><input type="radio" name="whatsapp" value="si" required><span>Sí, quiero</span></label>
+            <label class="opcion"><input type="radio" name="whatsapp" value="no"><span>No, gracias</span></label>
+            <label class="opcion"><input type="radio" name="whatsapp" value="mas-adelante"><span>Más adelante</span></label>
+          </div>
+        </fieldset>
+        <label class="consentimiento">
+          <input type="checkbox" name="privacidad" value="Acepta la política de privacidad" required>
+          <span>He leído la información sobre protección de datos y la <a href="politica-privacidad.html">política de privacidad</a>, y consiento el tratamiento de mis datos para gestionar mi inscripción y recibir información de la asociación. <span class="obligatorio">*</span></span>
+        </label>
+        <button class="boton boton-primario" type="submit">Enviar inscripción {{ico:flecha}}</button>
+        <p class="mensaje-form" id="mensaje-form" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="texto-legal" id="proteccion-datos">
+        <h3>Protección de datos</h3>
+        <p>De conformidad con el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales, le informamos de que el responsable del tratamiento de sus datos es <strong>JUNTOS ANTE EL CUSHING, Asociación de Pacientes con Síndrome de Cushing</strong> (NIF G27583731, domicilio social: Calle Mur, n.º 128, planta 2, puerta 2, 08760 Martorell (Barcelona)).</p>
+        <p>Sus datos se tratarán con la finalidad de gestionar su inscripción como socio o socia y de enviarle información relacionada con las actividades, novedades y servicios de la asociación. La base legal es su consentimiento, que puede retirar en cualquier momento. Los datos no se cederán a terceros salvo obligación legal. Para hacer llegar el formulario al correo de la asociación se utiliza el servicio externo FormSubmit (más información en la <a href="politica-privacidad.html">política de privacidad</a>).</p>
+        <p>Puede ejercer sus derechos de acceso, rectificación, supresión, limitación del tratamiento, oposición y portabilidad escribiendo a <a href="mailto:{{red:email}}">{{red:email}}</a> y acreditando su identidad. Si considera que sus derechos no se han respetado, puede presentar una reclamación ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>).</p>
+      </div>
+    </div>
+  </div>
+</section>

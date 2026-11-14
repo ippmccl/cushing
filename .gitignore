@@ -1,0 +1,16 @@
+# Material original recibido de la asociación (no se publica)
+*.doc
+*.docx
+/*.pdf
+/logo.jpeg
+/8-abril-2025/
+/8-abril-2026/
+/segunda-jornada/
+
+# Imágenes antiguas que ya no usa la web
+assets/img/logo-cabecera.png
+assets/img/logo-juntos-ante-el-cushing.png
+assets/img/logo-juntos-ante-el-cushing-hd.jpg
+
+# Configuración local
+.claude/
