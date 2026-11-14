@@ -41,6 +41,30 @@ const REDES = {
   email: 'juntosanteelcushing@gmail.com'
 };
 
+
+const URL_BASE = "https://juntosanteelcushing.org/";
+const ORG = {
+  "@context": "https://schema.org",
+  "@type": ["NGO", "MedicalOrganization"],
+  "@id": URL_BASE + "#organizacion",
+  "name": "Juntos ante el Cushing",
+  "legalName": "JUNTOS ANTE EL CUSHING, Asociación de Pacientes con Síndrome de Cushing",
+  "alternateName": ["Asociación Juntos ante el Cushing", "Asociación de Pacientes con Síndrome de Cushing", "Juntos ante el Cushing, asociación de pacientes de Cushing"],
+  "url": URL_BASE,
+  "logo": URL_BASE + "assets/img/logo-oficial.png",
+  "image": URL_BASE + "assets/img/logo-oficial.png",
+  "description": "Asociación de pacientes sin ánimo de lucro que acompaña a personas con síndrome de Cushing y enfermedad de Cushing y a sus familias en España y Latinoamérica: información, apoyo emocional, comunidad y visibilidad de esta enfermedad rara.",
+  "slogan": "Porque nadie debería recorrer este camino en soledad",
+  "taxID": "G27583731",
+  "nonprofitStatus": "NonprofitType",
+  "email": "juntosanteelcushing@gmail.com",
+  "telephone": "+34648524836",
+  "address": { "@type": "PostalAddress", "streetAddress": "Calle Mur, 128, planta 2, puerta 2", "postalCode": "08760", "addressLocality": "Martorell", "addressRegion": "Barcelona", "addressCountry": "ES" },
+  "areaServed": [{ "@type": "Country", "name": "España" }, { "@type": "Place", "name": "Latinoamérica" }],
+  "knowsAbout": ["Síndrome de Cushing", "Enfermedad de Cushing", "Hipercortisolismo", "Cushing hipofisario", "Cushing suprarrenal", "Cushing ectópico", "Cushing iatrogénico", "Enfermedades raras", "Apoyo a pacientes"],
+  "sameAs": ["https://www.instagram.com/juntosanteelcushing", "https://www.facebook.com/share/17VocVd75p/", "https://x.com/juntoscushing"]
+};
+
 const MENU = [
   ['index.html', 'Inicio'],
   ['proceso.html', 'Proceso'],
@@ -54,18 +78,25 @@ function layout(meta, body) {
   const nav = MENU.map(([href, txt]) =>
     `<li><a href="${href}"${meta.activo === href ? ' aria-current="page"' : ''}>${txt}</a></li>`).join('\n        ');
   return `<!DOCTYPE html>
-<html lang="es">
+<html lang="es-ES">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${meta.titulo}</title>
 <meta name="description" content="${meta.descripcion}">
+<link rel="canonical" href="${URL_BASE}${meta.ruta}">
+<meta property="og:site_name" content="Juntos ante el Cushing">
+<meta property="og:locale" content="es_ES">
 <meta property="og:title" content="${meta.titulo}">
 <meta property="og:description" content="${meta.descripcion}">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/img/logo-oficial.png">
+<meta property="og:url" content="${URL_BASE}${meta.ruta}">
+<meta property="og:image" content="${URL_BASE}assets/img/logo-oficial.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@JuntosCushing">
 <meta name="theme-color" content="#5e2a86">
-<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<script type="application/ld+json">${JSON.stringify(ORG)}</script>
+${meta.jsonld ? "<script type=\"application/ld+json\">" + JSON.stringify(meta.jsonld) + "</script>\n" : ""}<link rel="icon" type="image/png" href="assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -147,6 +178,7 @@ for (const f of fs.readdirSync(SRC).filter(f => f.endsWith('.html'))) {
   const txt = fs.readFileSync(path.join(SRC, f), 'utf8');
   const nl = txt.indexOf('\n');
   const meta = JSON.parse(txt.slice(0, nl));
+  meta.ruta = f === "index.html" ? "" : f;
   let body = txt.slice(nl + 1)
     .replace(/\{\{ico:(\w+)\}\}/g, (_, k) => { if (!ico[k]) throw new Error('icono ' + k); return ico[k]; })
     .replace(/\{\{red:(\w+)\}\}/g, (_, k) => REDES[k]);

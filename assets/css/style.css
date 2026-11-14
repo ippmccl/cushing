@@ -663,3 +663,12 @@ fieldset.campo { border: 0; padding: 0; margin: 0 0 20px; }
 .fuentes a { word-break: break-word; }
 .credito-foto { font-size: .82rem; color: var(--texto-suave); margin: 10px 0 0; text-align: right; }
 .galeria-videos:has(video:only-child) { grid-template-columns: minmax(0, 420px); }
+
+/* ---------- Preguntas frecuentes ---------- */
+.faq { display: grid; gap: 12px; }
+.faq details { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: var(--r-m); padding: 18px 22px; }
+.faq summary { cursor: pointer; font-weight: 800; color: var(--morado-900); list-style: none; position: relative; padding-right: 30px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 0; top: -2px; font-size: 1.4rem; color: var(--morado-600); }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { margin: 12px 0 0; color: var(--texto-suave); }
