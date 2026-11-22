@@ -72,6 +72,7 @@ const MENU = [
   ['proceso.html', 'Proceso'],
   ['apoyo.html', 'Apoyo'],
   ['guias.html', 'Guías'],
+  ['talleres.html', 'Talleres'],
   ['eventos.html', 'Eventos'],
   ['contacto.html', 'Contacto']
 ];
