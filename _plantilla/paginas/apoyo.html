@@ -52,11 +52,12 @@
   <div class="contenedor">
     <div class="llamada aparece">
       <div>
-        <span class="estado">Próximamente</span>
+        <span class="estado">Donativo: 30 € al año</span>
         <h2>Colabora con una donación</h2>
-        <p>Cada aportación nos ayuda a organizar talleres y jornadas, y a dar visibilidad al síndrome de Cushing. Muy pronto publicaremos aquí el número de cuenta de la asociación.</p>
+        <p>Cada aportación nos ayuda a organizar talleres y jornadas, y a dar visibilidad al síndrome de Cushing. Puedes hacer tu donativo por transferencia bancaria:</p>
+        <p style="margin-top:8px"><strong>Titular:</strong> Juntos ante el Cushing<br><strong>IBAN:</strong> <span style="font-family:monospace;font-size:1.05rem;user-select:all">ES45 0049 4414 8628 1006 7481</span><br><strong>Concepto:</strong> Donativo</p>
       </div>
-      <span class="boton boton-primario" aria-disabled="true" style="cursor:default;opacity:.65">{{ico:corazon}} Donar (muy pronto)</span>
+      <button type="button" class="boton boton-primario" onclick="navigator.clipboard.writeText('ES4500494414862810067481').then(()=>{this.lastChild.textContent=' ¡Número de cuenta copiado!'})">{{ico:corazon}}<span> Donar: copiar el número de cuenta</span></button>
     </div>
   </div>
 </section>

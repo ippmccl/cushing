@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=mwrzt76y">
+<link rel="stylesheet" href="assets/css/style.css?v=mws04k5i">
 </head>
 <body>
 <a class="salto" href="#contenido">Saltar al contenido</a>
@@ -100,11 +100,12 @@
   <div class="contenedor">
     <div class="llamada aparece">
       <div>
-        <span class="estado">Próximamente</span>
+        <span class="estado">Donativo: 30 € al año</span>
         <h2>Colabora con una donación</h2>
-        <p>Cada aportación nos ayuda a organizar talleres y jornadas, y a dar visibilidad al síndrome de Cushing. Muy pronto publicaremos aquí el número de cuenta de la asociación.</p>
+        <p>Cada aportación nos ayuda a organizar talleres y jornadas, y a dar visibilidad al síndrome de Cushing. Puedes hacer tu donativo por transferencia bancaria:</p>
+        <p style="margin-top:8px"><strong>Titular:</strong> Juntos ante el Cushing<br><strong>IBAN:</strong> <span style="font-family:monospace;font-size:1.05rem;user-select:all">ES45 0049 4414 8628 1006 7481</span><br><strong>Concepto:</strong> Donativo</p>
       </div>
-      <span class="boton boton-primario" aria-disabled="true" style="cursor:default;opacity:.65"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg> Donar (muy pronto)</span>
+      <button type="button" class="boton boton-primario" onclick="navigator.clipboard.writeText('ES4500494414862810067481').then(()=>{this.lastChild.textContent=' ¡Número de cuenta copiado!'})"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg><span> Donar: copiar el número de cuenta</span></button>
     </div>
   </div>
 </section>
@@ -230,6 +231,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=mwrzt76y"></script>
+<script src="assets/js/main.js?v=mws04k5i"></script>
 </body>
 </html>
