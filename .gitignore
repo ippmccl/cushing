@@ -14,3 +14,8 @@ assets/img/logo-juntos-ante-el-cushing-hd.jpg
 
 # Configuración local
 .claude/
+
+# Imágenes originales sueltas en la carpeta principal (no se publican)
+/*.jpg
+/*.jpeg
+/*.png
